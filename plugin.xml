@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="Sample Action Set"
+            visible="true"
+            id="bookmark.actionSet">
+         <action
+               class="bookmark.actions.ToggleBookMark"
+               definitionId="bookmark.command1"
+               icon="icons/sample.gif"
+               id="bookmark.actions.SampleAction"
+               label="Add BookMark"
+               style="push">
+         </action>
+         <action
+         	   class="bookmark.actions.ListAction"
+         	   definitionId="bookmark.command.list"
+               id="bookmark.actions.list"
+               label="List BookMark"
+               style="push">
+         </action>
+         <action
+         	   class="bookmark.actions.GotoNextBookmark"
+         	   definitionId="bookmark.command.next"
+               id="bookmark.actions.list"
+               label="Next BookMark"
+               style="push">
+         </action>
+         <action
+         	   class="bookmark.actions.GotoPrevBookmark"
+         	   definitionId="bookmark.command.previous"
+               id="bookmark.actions.list"
+               label="Previous BookMark"
+               style="push">
+         </action>
+         <action
+               class="bookmark.actions.ClearConsole"
+               id="bookmark.action.clearconsole"
+               definitionId="bookmark.command.clearconsole"
+               label="Clear Console"
+               style="push">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="bookmark.command1"
+            contextId="org.eclipse.ui.textEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="Ctrl+B">
+      </key>
+      <key
+            commandId="bookmark.command.list"
+            contextId="org.eclipse.ui.textEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="Ctrl+Q">
+      </key>
+      <key
+            commandId="bookmark.command.next"
+            contextId="org.eclipse.ui.textEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="Ctrl+N">
+      </key>
+      <key
+            commandId="bookmark.command.previous"
+            contextId="org.eclipse.ui.textEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="Ctrl+P">
+      </key>
+      <key
+            commandId="bookmark.command.clearconsole"
+            contextId="org.eclipse.ui.textEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="Alt+X">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="bookmark.command1"
+            name="bookmark command">
+      </command>
+      <command
+            id="bookmark.command.list"
+            name="bookmark list">
+      </command>
+      <command
+            id="bookmark.command.next"
+            name="bookmark list">
+      </command>
+      <command
+            id="bookmark.command.previous"
+            name="bookmark list">
+      </command>
+      <command
+            id="bookmark.command.clearconsole"
+            name="bookmark list">
+      </command>
+   </extension>
+
+</plugin>
